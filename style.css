@@ -20,7 +20,7 @@ body {
 a {
   text-decoration: none;
 }
-ul.menu {
+ul {
   list-style: none;
 }
 /* Header */
@@ -74,7 +74,6 @@ ul.menu {
   position: relative;
   width: 24px;
 } /* Style span tag */
-
 .hamb-line::before,
 .hamb-line::after {
   background: var(--white);
@@ -91,7 +90,6 @@ ul.menu {
 .hamb-line::after {
   top: -5px;
 }
-
 .side-menu {
   display: none;
 } /* Hide checkbox */
@@ -148,7 +146,6 @@ ul.menu {
     display: none;
   }
 }
-
 .nav-btn {
   padding: 10px 30px;
   background-color: transparent;
@@ -166,7 +163,6 @@ ul.menu {
 .hero-section {
   background-color: var(--info);
 }
-
 .hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -182,7 +178,6 @@ ul.menu {
 .hero h1 {
   font-size: 45px;
 }
-
 .animaited-text {
   width: 22ch;
   animation: typing 2s infinite steps(22) alternate,
@@ -193,13 +188,11 @@ ul.menu {
   font-family: monospace;
   font-size: 2em;
 }
-
 @keyframes typing {
   from {
     width: 0;
   }
 }
-
 @keyframes blink {
   50% {
     border-color: transparent;
@@ -280,7 +273,6 @@ ul.menu {
   color: var(--white);
   background-color: var(--dark);
 }
-
 /*! case study section */
 .case-study-grid-container {
   max-width: 1200px;
@@ -318,7 +310,6 @@ ul.menu {
   /* visibility: visible; */
   opacity: 1;
 }
-
 .overlay::before,
 .overlay::after {
   content: "";
@@ -341,8 +332,7 @@ ul.menu {
 .overlay:hover::after {
   bottom: 30%;
 }
-
-/*! pricing section */
+/*! start pricing section */
 .pricing-container {
   max-width: 1200px;
   margin: 100px auto;
@@ -350,14 +340,13 @@ ul.menu {
   justify-content: space-between;
 }
 .pricing-container .card {
-  width: 30%;
+  width: 350px;
 }
 .pricing-container .top {
   text-align: center;
   background-color: var(--warning);
   position: relative;
 }
-
 .pricing-container .top h2 {
   padding: 20px 0;
 }
@@ -374,7 +363,6 @@ ul.menu {
   transform: rotate(0.3turn);
   /* z-index: -1; */
 }
-
 .pricing-container .top::before {
   left: -4%;
 }
@@ -383,7 +371,21 @@ ul.menu {
   right: -5%;
   bottom: -45%;
 }
-
+.pricing-container .top h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #fff;
+  padding: 20px 0;
+}
+.pricing-container .card.yello .top {
+  background-color: var(--warning);
+}
+.pricing-container .card.blue .top {
+  background-color: var(--info);
+}
+.pricing-container .card.green .top {
+  background-color: var(--succsess);
+}
 .pricing-container ul {
   position: relative;
   z-index: 1;
@@ -392,18 +394,81 @@ ul.menu {
   position: relative;
   z-index: 1;
   /* margin-bottom: 100px; */
-  border: solid 6px #3333334e;
-  width: 40%;
-  margin: 0 auto 100px;
+  border: solid 8px #3333334e;
+  width: 150px;
+  margin: 0 auto 50px;
   padding: 20px;
   border-radius: 50%;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.pricing-container .circular-pricing span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.pricing-container ul li {
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.pricing-container ul i {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.pricing-container ul i.yellow {
+  color: var(--warning);
+}
+.pricing-container ul i.blue {
+  color: var(--info);
+}
+.pricing-container ul i.green {
+  color: var(--succsess);
+}
+.pricing-container a {
+  border: 1px solid;
+  display: block;
+  width: fit-content;
+  padding: 15px 45px;
+  margin: 30px auto;
+  font-weight: bold;
+  color: #222;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.pricing-container a.yellow {
+  border-color: var(--warning);
+}
+.pricing-container a.blue {
+  border-color: var(--info);
+}
+.pricing-container a.green {
+  border-color: var(--succsess);
 }
 
-.team-container{
+.pricing-container .card.yellow:hover a,
+.pricing-container .card.yellow:hover .circular-pricing {
+  background-color: var(--warning);
+  color: #fff;
+}
+.pricing-container .card.blue:hover a,
+.pricing-container .card.blue:hover .circular-pricing {
+  background-color: var(--info);
+  color: #fff;
+}
+.pricing-container .card.green:hover a,
+.pricing-container .card.green:hover .circular-pricing {
+  background-color: var(--succsess);
+  color: #fff;
+}
+
+/*! end pricing section */
+
+.team-container {
   max-width: 1200px;
   margin: 100px auto;
   display: flex;
