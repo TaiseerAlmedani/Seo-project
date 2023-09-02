@@ -403,6 +403,8 @@ ul.menu {
   justify-content: center;
 }
 
+
+/* Start Team section */
 .team-container{
   max-width: 1200px;
   margin: 100px auto;
@@ -411,3 +413,37 @@ ul.menu {
   align-items: center;
   /* flex-wrap: wrap; */
 }
+.team-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.team-container .team-memeber{
+margin-right: 20px;
+margin-bottom: 50px;
+text-align: center;
+transition: 0.3s;
+}
+.team-container .team-memeber img{
+width: 100%;
+margin-bottom: 20px;
+transition: 0.3s;
+
+}
+.team-container .team-memeber h2{
+color: #32325C;
+font-size: 30px;
+margin-bottom: 10px;
+transition: 0.3s;
+}
+.team-container .team-memeber p{
+margin-bottom: 20px;
+}
+.team-container .team-memeber:hover{
+box-shadow: 0 5px 30px rgba(156, 185, 226, 0.3);
+}
+.team-container .team-memeber:hover.team-memeber h2{
+color: var(--info);
+}
+/* End Team section */

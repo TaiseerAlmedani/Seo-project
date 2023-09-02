@@ -33,3 +33,10 @@
     grid-template-columns: 1fr;
     justify-content: center;
   } */
+ /* Start Team section */
+ @media(max-width:767px){
+  .team-container .team-memeber{
+    width: 100%;
+  }
+  }
+  /* End Team section */
